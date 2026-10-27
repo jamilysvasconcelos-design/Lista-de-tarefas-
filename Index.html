@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minha Lista de Tarefas (To-Do List)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Container Principal da Aplicação -->
+  <main class="app-container">
+    <h1>Minha Lista de Tarefas</h1>
+
+    <!-- Campo de Entrada de Tarefas -->
+    <div class="input-group">
+      <input
+        type="text"
+        id="itemInput"
+        placeholder="Digite uma nova tarefa..."
+        aria-label="Descrição da nova tarefa"
+      />
+      <button id="addBtn" type="button">Adicionar</button>
+    </div>
+
+    <!-- Filtros por Status -->
+    <div class="filter-group">
+      <button class="filter-btn active" data-filter="todas">Todas</button>
+      <button class="filter-btn" data-filter="pendentes">Pendentes</button>
+      <button class="filter-btn" data-filter="concluidas">Concluídas</button>
+    </div>
+
+    <!-- Lista Dinâmica -->
+    <ul id="listaItens" aria-live="polite"></ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
